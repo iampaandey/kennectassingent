@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body{
+    background-color: white;
+    margin: 0px;
+    padding: 2px;
+}
+.even-main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-home{
+    display:flex;
+    flex-direction: column;
+    row-gap: 130px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+    flex-wrap: wrap;
+    padding: 19px;
+}
+
+.main-nav{
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    column-gap: 250px;
+    font-size: 22px;
+    padding: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color:  rgba(245, 245, 245, 0.87);
+    box-shadow: 2px 2px 14px rgb(176, 176, 176);
+
+}
+.home-nav{
+    text-decoration: none;
+}
+.profile-nav{
+    text-decoration: none;
+}
+.about-nav{
+    text-decoration: none;
+}
+.blog-nav{
+    text-decoration: none;
+  }
+
+.card-body{
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 6px;
+    /* width: 600px; */
+    justify-content:center;
+    align-items:center;
+    border: 1px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 15px;
+    padding: 50px;
+    flex-wrap: wrap;
+    box-shadow: 2px 2px 14px rgb(176, 176, 176);
+}
+.card-title{
+    color: rgb(119, 139, 252);
+}
+.card-body:hover{
+    box-shadow: 4px 4px 2px 1px rgb(119, 139, 252);
+}
+.commentBox{
+    cursor: pointer;
+
+}
+.commentBox:hover{
+    transform: scale(1.14);
+    transition: 0.7s;
+}
+
+input{
+    box-shadow: 2px 2px 14px rgb(176, 176, 176);
+}
+textarea{
+    width: 450px;
+    border-radius: 10px;
+    height: 250px;
+    padding: 30px 40px;
+    margin: 30px 350px;
+    box-shadow: 2px 2px 14px rgb(176, 176, 176);
+}
+.textbox-main{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input{
+    padding: 6px;
+    margin: 8px;
+    border-radius: 7px;
+}
+.buttn-submit{
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(119, 139, 252);
+    color: white;
+    border: none;
+    outline: none;
+}
+.buttn-submit:hover{
+    box-shadow: 2px 2px 14px rgb(176, 176, 176);
+    border: 2px rgb(119, 139, 252);
+}
+.allblg-main{
+   display: flex;
+   flex-direction: column;
+   column-gap: 50px;
+   row-gap: 50px;
+   justify-content: center;
+   align-items: center;
+   margin: 10px 20px;
+   padding: 30px;
+}
+.search-Box{
+   margin-top: 20px;
+}
+.search-bx{
+    width: 200px;
+    height: 22px;
+}
+.signin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px; 
+}
+
+.login-title{
+    margin-left: 60px;
+}
+.link-tag{
+    text-decoration: none;
+}
+.profile-icon{
+    margin-top: 18px;
+    height: 25px;
+    width: 25px;
+}
+.profile-section{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2px;
+}
+.btn-lgout{
+    margin-top: 18px;
+    height: 25px;
+    border-radius: 4px;
+    padding: 4px;
+    margin-left: 40px;
+}
+.btn-lgout:hover{
+    border: 2px solid rgb(119, 139, 252);
+}
+.blogs-section{
+    display: flex;
+    flex-direction:column ;
+    row-gap: 30px;
+}
+.dynamic-main{
+    padding: 10px;
+    margin: 20px;
+}
+.edit-icon{
+    position: relative;
+    left: 10px;
+}
+.edit-icon:hover{
+    transition: transform 0.4s ease-in-out;
+    transform: scale(1.5);
+}
+.comCard{
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+    row-gap: 3px;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.commentSection{
+    border-radius: 5px;
+    box-shadow: 2px 2px 14px rgb(176, 176, 176);
+    border: 1px solid blue;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+hr{
+    width: 600px;
+}
+.main-post{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
