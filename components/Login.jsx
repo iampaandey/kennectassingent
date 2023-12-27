@@ -22,7 +22,9 @@ const Login = ({ isLogin, setIsLogin }) => {
     if (response.status === 200) {
       const data = await response.json();
       console.log(data);
-      localStorage.setItem('user', JSON.stringify(data));
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('user', JSON.stringify(data));
+      }
       setIsLogin(!isLogin)
       alert('Login Successfull ! Go Write Something Cool')
     } else {

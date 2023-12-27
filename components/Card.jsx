@@ -13,7 +13,10 @@ const Card = ({ title, tag, paraText, user, id, fetchData, comments }) => {
   useEffect(()=>{
    fetchData();
   },[])
-  const username = JSON.parse(localStorage.getItem('user'))?.username;
+  var username;
+  if (typeof window !== 'undefined') {
+    username=JSON.parse(localStorage.getItem('user'))?.username;
+  }
   
   const handleAddComment = async () => {
     const formData = {

@@ -5,27 +5,19 @@ import TextBox from "./TextBox";
 import Login from "./Login";
 
 const MyProfile = () => {
-    // const userName=JSON.parse(localStorage.getItem('user')).username;
-    // const [arr,setArr]=useState([]);
-
-    // useEffect(()=>{
-    //  const allblgs=JSON.parse(localStorage.getItem('arrBlogs'));
-    //  console.log(allblgs);
-    //  console.log(userName);
-    //  const arr1=allblgs?.filter((e)=>{
-    //     return e?.username===userName
-    //  })
-    //  setArr(arr1);
-    //  console.log(arr1);
-    // },[])
+   
+   
     const [isLogin,setIsLogin]=useState(false);
 
     const handleLogOut=()=>{
-     localStorage.removeItem("user");
+      if (typeof window !== 'undefined') {
+
+        localStorage.removeItem("user");
+      }
      setIsLogin(false);
     }
     useEffect(()=>{
-      if(localStorage.getItem('user')!==null){
+      if(localStorage.getItem('user')!==null && typeof window !== 'undefined' ){
         setIsLogin(true);
       }
     },[])

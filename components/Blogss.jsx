@@ -4,7 +4,11 @@ import { useEffect, useState } from "react"
 import Card from "./Card";
 
 const Blogss = () => {
-  const data = JSON.parse(localStorage.getItem('arrBlogs'));
+  var data;
+  if (typeof window !== 'undefined') {
+   data = JSON.parse(localStorage.getItem('arrBlogs'));
+  }
+    
   const [blgArr, setBlgArr] = useState([]);
 
 
@@ -15,7 +19,9 @@ const Blogss = () => {
       method: 'GET',
     });
     data = await response.json();
-    localStorage.setItem("arrBlogs", JSON.stringify(data));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("arrBlogs", JSON.stringify(data));
+    }
     setBlgArr(data);
     console.log(data);
   }
@@ -26,7 +32,9 @@ const Blogss = () => {
   const handleSearch = (value) => {
     console.log(blgArr)
     if (value.length === 0) {
-      setBlgArr(JSON.parse(localStorage.getItem("arrBlogs")))
+      if (typeof window !== 'undefined') {
+        setBlgArr(JSON.parse(localStorage.getItem("arrBlogs")))
+      }
     }
     else {
       const str = value;

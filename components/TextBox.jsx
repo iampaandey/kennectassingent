@@ -12,7 +12,11 @@ const TextBox = () => {
 
   const handleClick = async(e) => {
     if (localStorage.getItem('user') !== null) {
-      const user = JSON.parse(localStorage.getItem('user'))?.username;
+      var user;
+      if (typeof window !== 'undefined') {
+        user= JSON.parse(localStorage.getItem('user'))?.username;
+
+      }
       const formData = {
         paraText: currPara,
         tag: currTagValue,
